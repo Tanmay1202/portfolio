@@ -1,0 +1,139 @@
+.system-loader {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-void);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-modal);
+}
+
+.loader-container {
+    width: 100%;
+    max-width: 600px;
+    padding: var(--space-xl);
+}
+
+.loader-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-graphite);
+}
+
+.loader-header span {
+    font-size: var(--text-sm);
+    letter-spacing: 0.1em;
+}
+
+.boot-logs {
+    margin-bottom: var(--space-xl);
+    min-height: 120px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.log-entry {
+    display: flex;
+    gap: var(--space-md);
+    font-size: var(--text-xs);
+    line-height: 1.8;
+    color: var(--color-muted);
+    animation: logFadeIn var(--transition-base) ease-out;
+}
+
+@keyframes logFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.log-timestamp {
+    color: var(--color-accent);
+    opacity: 0.6;
+}
+
+.log-message {
+    flex: 1;
+}
+
+.progress-container {
+    margin-bottom: var(--space-lg);
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-xs);
+    margin-bottom: var(--space-sm);
+    color: var(--color-ghost);
+    letter-spacing: 0.1em;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-graphite);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--color-accent);
+    transition: width var(--transition-fast) linear;
+    box-shadow: 0 0 8px var(--color-accent-glow);
+}
+
+.progress-address {
+    font-size: var(--text-xs);
+    margin-top: var(--space-xs);
+    text-align: right;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-xs);
+    color: var(--color-ghost);
+    letter-spacing: 0.1em;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-accent);
+    box-shadow: 0 0 8px var(--color-accent-glow);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@media (max-width: 768px) {
+    .loader-container {
+        padding: var(--space-lg);
+    }
+
+    .boot-logs {
+        min-height: 80px;
+    }
+}

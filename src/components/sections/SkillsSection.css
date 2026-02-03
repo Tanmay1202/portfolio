@@ -1,0 +1,105 @@
+.skills-section {
+    background-color: rgba(39, 39, 42, 0.3);
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
+}
+
+.capability-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.category-title {
+    font-size: var(--text-sm);
+    letter-spacing: 0.15em;
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--text-sm);
+}
+
+.skill-name {
+    color: var(--color-ghost);
+}
+
+.skill-level {
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-graphite);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background-color: var(--color-accent);
+    transition: width 1s ease-out;
+    box-shadow: 0 0 8px var(--color-accent-glow);
+}
+
+/* Resources Summary */
+.resources-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    background-color: rgba(39, 39, 42, 0.5);
+    border: 1px solid var(--color-graphite);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--text-sm);
+    padding: var(--space-sm);
+}
+
+.summary-row span:first-child {
+    letter-spacing: 0.1em;
+}
+
+.summary-row span:last-child {
+    font-weight: 600;
+    font-size: var(--text-lg);
+}
+
+@media (max-width: 768px) {
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .resources-summary {
+        grid-template-columns: 1fr;
+        padding: var(--space-lg);
+    }
+}
