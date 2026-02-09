@@ -1,17 +1,62 @@
-# React + Vite
+# [Tanmay Singh] | Software Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A high-signal, recruiter-optimized portfolio built with a focus on technical depth, engineering judgment, and minimalist system aesthetics.
 
-Currently, two official plugins are available:
+## 🚀 Engineering Identity
+This portfolio is themed as a **Technical Interface / System Protocol**. It prioritizes performance, skimmability, and evidence-based results over generic UI tropes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- **Frontend**: React 19, Vite, Tailwind CSS
+- **Animations**: Framer Motion
+- **Communication**: EmailJS (Integrated Contact Protocol)
+- **Infrastructure**: Supabase (PostgreSQL), Vercel
 
-## React Compiler
+## 📦 Featured Projects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. EnviRon: AI Waste Manager
+**AI-Powered Sustainable Waste Management Platform**
+- **Core**: Real-time image classification using **Google Cloud Vision API**.
+- **AI**: Integrated **Gemini API** for a context-aware sustainability consultant.
+- **Impact**: Gamified "Eco-Tree" progression system and geolocation-based disposal center mapping.
 
-## Expanding the ESLint configuration
+### 2. AgrimEducation
+**High-Performance Educational Portal**
+- **Performance**: Achieved **98+ Lighthouse scores** and 1.1s LCP.
+- **Backend**: Engineered a full-stack RESTful API with **Node.js/SQLite**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# portfolio" 
+### 3. MacnManage
+**Production-Grade Resource Management**
+- **UX**: Features a **Bento Grid** dashboard and a custom `Cmd+K` global search interface.
+- **Consistency**: Implemented robust data synchronization in a **MERN** environment.
+
+## ⚙️ Local Development
+
+### Prerequisites
+- Node.js (v18+)
+- npm
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:Tanmay1202/portfolio.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up environment variables:
+   - Copy `.env.example` to `.env`
+   - Fill in your **EmailJS** credentials (Service ID, Template ID, Public Key).
+
+### Running Locally
+```bash
+npm run dev
+```
+
+## 📬 Connectivity
+- **GitHub**: [@Tanmay1202](https://github.com/Tanmay1202)
+- **LinkedIn**: [/in/tanmay1202](https://linkedin.com/in/tanmay1202)
+- **Email**: singhtanmay1202@gmail.com
+
+---
+*Built with precision and high-priority protocols.*
