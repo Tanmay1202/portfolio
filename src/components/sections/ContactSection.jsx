@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './ContactSection.css';
 
 const ContactSection = () => {
@@ -13,15 +14,29 @@ const ContactSection = () => {
         e.preventDefault();
         setStatus('EXECUTING');
 
-        // Simulate form submission
-        setTimeout(() => {
-            setStatus('SUCCESS');
-            setFormData({ name: '', email: '', message: '' });
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-            setTimeout(() => {
-                setStatus('IDLE');
-            }, 3000);
-        }, 1500);
+        const templateParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+            to_name: 'Tanmay', // You can change this or make it dynamic
+        };
+
+        emailjs.send(serviceId, templateId, templateParams, publicKey)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setStatus('SUCCESS');
+                setFormData({ name: '', email: '', message: '' });
+                setTimeout(() => setStatus('IDLE'), 3000);
+            })
+            .catch((err) => {
+                console.error('FAILED...', err);
+                setStatus('ERROR');
+                setTimeout(() => setStatus('IDLE'), 5000);
+            });
     };
 
     const handleChange = (e) => {
@@ -67,14 +82,17 @@ const ContactSection = () => {
                         </div>
 
                         <div className="social-links mono">
-                            <a href="https://github.com/yourusername" className="social-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/Tanmay1202" className="social-link" target="_blank" rel="noopener noreferrer">
                                 <span className="text-muted">$</span> github
                             </a>
-                            <a href="https://linkedin.com/in/yourusername" className="social-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://linkedin.com/in/tanmay1202" className="social-link" target="_blank" rel="noopener noreferrer">
                                 <span className="text-muted">$</span> linkedin
                             </a>
-                            <a href="mailto:your.email@example.com" className="social-link">
+                            <a href="mailto:singhtanmay1202@gmail.com" className="social-link">
                                 <span className="text-muted">$</span> email
+                            </a>
+                            <a href="/assets/lpu_best_resume (3).pdf" className="social-link" target="_blank" rel="noopener noreferrer">
+                                <span className="text-muted">$</span> resume
                             </a>
                         </div>
                     </div>
@@ -138,6 +156,7 @@ const ContactSection = () => {
                                 {status === 'IDLE' && '[EXECUTE]'}
                                 {status === 'EXECUTING' && '[PROCESSING...]'}
                                 {status === 'SUCCESS' && '[SUCCESS]'}
+                                {status === 'ERROR' && '[RETRY_LATER]'}
                             </button>
 
                             {status === 'SUCCESS' && (

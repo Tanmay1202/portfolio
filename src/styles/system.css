@@ -5,35 +5,31 @@
 
 /* === COLOR SYSTEM === */
 :root {
-  /* Primary Palette - System Level */
-  --color-void: #0A0A0A;
-  /* Near-black background */
-  --color-graphite: #27272A;
-  /* Deep graphite */
-  --color-slate: #3F3F46;
-  /* Secondary elements */
-  --color-ghost: #FAFAF9;
-  /* Off-white text */
-  --color-muted: #A1A1AA;
-  /* Muted text */
+  /* Primary Palette - Refined Carbon */
+  --color-void: #050505;
+  --color-graphite: #111111;
+  --color-slate: #1A1A1A;
+  --color-ghost: #F5F5F7;
+  --color-muted: #86868B;
 
-  /* Accent - Phosphor Green (can swap to cyan) */
-  --color-accent: #10B981;
-  /* Phosphor green */
-  --color-accent-dim: #059669;
-  /* Dimmed accent */
-  --color-accent-glow: rgba(16, 185, 129, 0.2);
+  /* Accent - Aurora Bloom */
+  --color-accent: #00F5FF;
+  /* Electric Cyan */
+  --color-accent-dim: #008B8B;
+  --color-accent-glow: rgba(0, 245, 255, 0.15);
+  --color-secondary-accent: #8B5CF6;
+  /* AI Purple */
 
-  /* Alternative: Muted Cyan */
-  /* --color-accent: #22D3EE; */
-  /* --color-accent-dim: #06B6D4; */
-  /* --color-accent-glow: rgba(34, 211, 238, 0.2); */
+  /* Glassmorphism Surface Tokens */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 16px;
 
   /* System States */
   --color-success: #10B981;
-  --color-error: #EF4444;
-  --color-warning: #F59E0B;
-  --color-info: #3B82F6;
+  --color-error: #FF453A;
+  --color-warning: #FF9F0A;
+  --color-info: #0A84FF;
 
   /* Spacing - Mathematical 8px Grid */
   --space-unit: 8px;
@@ -54,9 +50,10 @@
   --space-4xl: calc(var(--space-unit) * 12);
   /* 96px */
 
-  /* Typography */
-  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Typography - High Contrast & Modern */
+  --font-mono: 'JetBrains Mono', 'Space Mono', monospace;
+  --font-sans: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
 
   /* Font Sizes - Precise Scale */
   --text-xs: 0.75rem;
@@ -202,10 +199,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-mono);
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  color: var(--color-ghost);
 }
 
 h1 {
@@ -329,6 +327,25 @@ main.mode-projects .bg-grid::before {
 
 .text-ghost {
   color: var(--color-ghost);
+}
+
+/* === GLASS UTILITIES === */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--space-md);
+}
+
+.glass-hover {
+  transition: all var(--transition-base);
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .bg-void {

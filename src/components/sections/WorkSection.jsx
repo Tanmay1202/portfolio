@@ -4,35 +4,35 @@ const WorkSection = () => {
     const modules = [
         {
             id: 'mod_001',
-            name: 'E-Commerce Platform',
+            name: 'DSA Training - HitBullseye',
             status: 'LOADED',
             address: '0x1A00',
-            description: 'High-performance distributed system handling 10M+ transactions',
-            stack: ['React', 'Node.js', 'PostgreSQL', 'Redis']
+            description: 'Advanced Data Structures & Algorithms training. High-performance code optimization and complexity analysis.',
+            stack: ['C++', 'Algorithms', 'Logic Design']
         },
         {
             id: 'mod_002',
-            name: 'Real-Time Analytics Engine',
+            name: 'Academic Core - LPU',
             status: 'LOADED',
             address: '0x1B00',
-            description: 'Low-latency data processing pipeline with sub-100ms response',
-            stack: ['Go', 'Kafka', 'ClickHouse', 'gRPC']
+            description: 'B.Tech in Computer Science (7.94 CGPA). Focus on OS, DBMS, and Network Communication.',
+            stack: ['DBMS', 'Computer Networks', 'OS']
         },
         {
             id: 'mod_003',
-            name: 'Infrastructure Automation',
+            name: 'Strategic Achievements',
             status: 'LOADED',
             address: '0x1C00',
-            description: 'Kubernetes-based deployment system with zero-downtime releases',
-            stack: ['Terraform', 'Kubernetes', 'Docker', 'ArgoCD']
+            description: 'GDG Hack2Skill Top 105. Solved 400+ algorithmic problems across LeetCode & CodeForces.',
+            stack: ['Problem Solving', 'Competitive Programming']
         },
         {
             id: 'mod_004',
-            name: 'API Gateway',
+            name: 'Network & System Certification',
             status: 'LOADED',
             address: '0x1D00',
-            description: 'Scalable gateway handling 50K RPS with intelligent routing',
-            stack: ['Rust', 'NGINX', 'Consul', 'Prometheus']
+            description: 'Certified in P2P Protocols, Local Area Networks, and Fundamentals of Network Communication.',
+            stack: ['TCP/IP', 'P2P', 'Security']
         }
     ];
 

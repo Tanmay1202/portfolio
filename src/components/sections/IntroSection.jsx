@@ -10,7 +10,7 @@ const IntroSection = () => {
                     <div className="system-identity">
                         <div className="identity-label mono text-muted">PROCESS_NAME</div>
                         <h1 className="identity-name mono">
-                            <span className="text-accent">$</span> <TerminalText text="YOUR_NAME" delay={150} />
+                            <span className="text-accent">$</span> <TerminalText text="Tanmay Singh" delay={150} />
                         </h1>
                     </div>
 
@@ -18,7 +18,7 @@ const IntroSection = () => {
                     <div className="system-capability">
                         <div className="capability-label mono text-muted">CAPABILITY</div>
                         <h2 className="capability-title sans">
-                            Software Engineer / System Architect
+                            Full Stack Developer / Software Engineer
                         </h2>
                     </div>
 
@@ -33,20 +33,20 @@ const IntroSection = () => {
                         </div>
                         <div className="info-row">
                             <span className="info-key text-muted">LOCATION</span>
-                            <span className="info-value">Your City, Country</span>
+                            <span className="info-value">Haryana, India</span>
                         </div>
                         <div className="info-row">
                             <span className="info-key text-muted">UPTIME</span>
-                            <span className="info-value">X years in production</span>
+                            <span className="info-value">Since 2023 (Production Ready)</span>
                         </div>
                     </div>
 
                     {/* System Description */}
                     <div className="system-description animate-flush">
                         <p className="sans text-muted">
-                            Building high-performance systems with surgical precision.
-                            Specializing in low-level optimizations, distributed architectures,
-                            and interfaces that feel inevitable.
+                            Engineering high-performance web applications and algorithmic solutions.
+                            Specializing in the MERN stack, React/Vite optimizations, and building
+                            scalable systems with surgical precision and 98+ Lighthouse performance.
                         </p>
                     </div>
 

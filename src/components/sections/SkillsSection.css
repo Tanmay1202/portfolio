@@ -16,10 +16,11 @@
 }
 
 .category-title {
-    font-size: var(--text-sm);
-    letter-spacing: 0.15em;
+    font-size: var(--text-xs);
+    letter-spacing: 0.2em;
     padding-bottom: var(--space-sm);
-    border-bottom: 1px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    text-transform: uppercase;
 }
 
 .skills-list {
@@ -68,28 +69,40 @@
 /* Resources Summary */
 .resources-summary {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
     padding: var(--space-xl);
-    background-color: rgba(39, 39, 42, 0.5);
-    border: 1px solid var(--color-graphite);
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--space-md);
+    margin-top: var(--space-2xl);
 }
 
 .summary-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: var(--text-sm);
+    flex-direction: column;
+    gap: var(--space-xs);
     padding: var(--space-sm);
+    border-right: 1px solid var(--glass-border);
 }
 
-.summary-row span:first-child {
-    letter-spacing: 0.1em;
+.summary-row:last-child {
+    border-right: none;
 }
 
-.summary-row span:last-child {
-    font-weight: 600;
-    font-size: var(--text-lg);
+.summary-key {
+    font-size: var(--text-xs);
+    letter-spacing: 0.15em;
+    color: var(--color-muted);
+}
+
+.summary-value {
+    font-weight: 700;
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    letter-spacing: -0.02em;
 }
 
 @media (max-width: 768px) {

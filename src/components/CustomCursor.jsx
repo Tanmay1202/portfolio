@@ -7,22 +7,34 @@ const CustomCursor = () => {
     const [isMouseDown, setIsMouseDown] = useState(false);
 
     useEffect(() => {
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+        let rafId;
+
         const onMouseMove = (e) => {
-            setPosition({ x: e.clientX, y: e.clientY });
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        };
+
+        const updateCursor = () => {
+            const ease = 0.15;
+            cursorX += (mouseX - cursorX) * ease;
+            cursorY += (mouseY - cursorY) * ease;
+
+            setPosition({ x: cursorX, y: cursorY });
+            rafId = requestAnimationFrame(updateCursor);
         };
 
         const onMouseOver = (e) => {
             const target = e.target;
-            if (
-                target.tagName === 'A' ||
-                target.tagName === 'BUTTON' ||
-                target.closest('button') ||
-                target.closest('a') ||
-                target.classList.contains('interactive')
-            ) {
-                setIsHovering(true);
-            } else {
-                setIsHovering(false);
+            const isClickable = target.closest('button') || target.closest('a') || target.classList.contains('interactive');
+            setIsHovering(!!isClickable);
+
+            if (isClickable) {
+                const rect = target.getBoundingClientRect();
+                // Future enhancement: magnetic pull towards center of rect if needed
             }
         };
 
@@ -33,12 +45,14 @@ const CustomCursor = () => {
         window.addEventListener('mouseover', onMouseOver);
         window.addEventListener('mousedown', onMouseDown);
         window.addEventListener('mouseup', onMouseUp);
+        rafId = requestAnimationFrame(updateCursor);
 
         return () => {
             window.removeEventListener('mousemove', onMouseMove);
             window.removeEventListener('mouseover', onMouseOver);
             window.removeEventListener('mousedown', onMouseDown);
             window.removeEventListener('mouseup', onMouseUp);
+            cancelAnimationFrame(rafId);
         };
     }, []);
 

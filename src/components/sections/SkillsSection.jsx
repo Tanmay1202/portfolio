@@ -5,28 +5,29 @@ const SkillsSection = () => {
         {
             category: 'LANGUAGES',
             skills: [
+                { name: 'C/C++', level: 92 },
                 { name: 'JavaScript/TypeScript', level: 95 },
                 { name: 'Python', level: 88 },
-                { name: 'Go', level: 82 },
-                { name: 'Rust', level: 75 }
+                { name: 'SQL', level: 85 },
+                { name: 'Rust', level: 78 }
             ]
         },
         {
             category: 'FRAMEWORKS',
             skills: [
-                { name: 'React/Next.js', level: 92 },
-                { name: 'Node.js', level: 90 },
-                { name: 'FastAPI', level: 85 },
-                { name: 'Kubernetes', level: 80 }
+                { name: 'React.js', level: 94 },
+                { name: 'Node.js/Express', level: 90 },
+                { name: 'pandas/NumPy', level: 85 },
+                { name: 'Matplotlib', level: 80 }
             ]
         },
         {
-            category: 'SYSTEMS',
+            category: 'SYSTEMS & TOOLS',
             skills: [
-                { name: 'PostgreSQL', level: 88 },
-                { name: 'Redis', level: 85 },
-                { name: 'Docker', level: 92 },
-                { name: 'AWS/GCP', level: 87 }
+                { name: 'MongoDB/Atlas', level: 92 },
+                { name: 'Docker/Azure', level: 82 },
+                { name: 'Firebase/WebSockets', level: 88 },
+                { name: 'Git/Github', level: 95 }
             ]
         }
     ];
@@ -70,16 +71,16 @@ const SkillsSection = () => {
                 {/* System Resources Summary */}
                 <div className="resources-summary mono">
                     <div className="summary-row">
-                        <span className="text-muted">TOTAL_CAPABILITIES</span>
-                        <span className="text-accent">12</span>
+                        <span className="summary-key">TOTAL_CAPABILITIES</span>
+                        <span className="summary-value">12</span>
                     </div>
                     <div className="summary-row">
-                        <span className="text-muted">AVG_PROFICIENCY</span>
-                        <span className="text-accent">86%</span>
+                        <span className="summary-key">AVG_PROFICIENCY</span>
+                        <span className="summary-value">86%</span>
                     </div>
                     <div className="summary-row">
-                        <span className="text-muted">SYSTEM_STATUS</span>
-                        <span className="text-accent">OPTIMAL</span>
+                        <span className="summary-key">SYSTEM_STATUS</span>
+                        <span className="summary-value">OPTIMAL</span>
                     </div>
                 </div>
             </div>
