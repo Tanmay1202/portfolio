@@ -67,6 +67,7 @@ npm run dev
 ## �📬 Connectivity
 - **GitHub**: [@Tanmay1202](https://github.com/Tanmay1202)
 - **LinkedIn**: [/in/tanmay1202](https://linkedin.com/in/tanmay1202)
+- **LeetCode**: [tanmaybenot](https://leetcode.com/u/tanmaybenot/)
 - **Email**: singhtanmay1202@gmail.com
 
 ---

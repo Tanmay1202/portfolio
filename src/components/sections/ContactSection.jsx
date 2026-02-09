@@ -88,6 +88,9 @@ const ContactSection = () => {
                             <a href="https://linkedin.com/in/tanmay1202" className="social-link" target="_blank" rel="noopener noreferrer">
                                 <span className="text-muted">$</span> linkedin
                             </a>
+                            <a href="https://leetcode.com/u/tanmaybenot/" className="social-link" target="_blank" rel="noopener noreferrer">
+                                <span className="text-muted">$</span> leetcode
+                            </a>
                             <a href="mailto:singhtanmay1202@gmail.com" className="social-link">
                                 <span className="text-muted">$</span> email
                             </a>
