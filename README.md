@@ -53,7 +53,18 @@ This portfolio is themed as a **Technical Interface / System Protocol**. It prio
 npm run dev
 ```
 
-## 📬 Connectivity
+## � Deployment (Vercel)
+
+1. **Connect Repository**: Import this project into your Vercel Dashboard.
+2. **Framework Preset**: Vercel should automatically detect **Vite**.
+3. **Environment Variables**:
+   - In Vercel Project Settings > Environment Variables, add:
+     - `VITE_EMAILJS_SERVICE_ID`
+     - `VITE_EMAILJS_TEMPLATE_ID`
+     - `VITE_EMAILJS_PUBLIC_KEY`
+4. **Deploy**: Once configured, every push to `main` will trigger a production build.
+
+## �📬 Connectivity
 - **GitHub**: [@Tanmay1202](https://github.com/Tanmay1202)
 - **LinkedIn**: [/in/tanmay1202](https://linkedin.com/in/tanmay1202)
 - **Email**: singhtanmay1202@gmail.com
