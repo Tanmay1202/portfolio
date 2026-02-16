@@ -7,6 +7,7 @@ import SkillsSection from './components/sections/SkillsSection';
 import ProjectsSection from './components/sections/ProjectsSection';
 import ContactSection from './components/sections/ContactSection';
 import CustomCursor from './components/CustomCursor';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './styles/system.css';
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
 
   return (
     <div className="app">
+      <SpeedInsights />
       <CustomCursor />
       <SystemNav currentMode={currentMode} onModeChange={handleModeChange} />
 
