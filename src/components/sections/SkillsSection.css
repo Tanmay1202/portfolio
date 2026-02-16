@@ -115,4 +115,15 @@
         grid-template-columns: 1fr;
         padding: var(--space-lg);
     }
+
+    .summary-row {
+        border-right: none;
+        border-bottom: 1px solid var(--glass-border);
+        padding-bottom: var(--space-md);
+    }
+
+    .summary-row:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
 }

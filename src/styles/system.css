@@ -486,7 +486,22 @@ section {
     --text-3xl: 1.5rem;
   }
 
+  html {
+    scroll-snap-type: none;
+  }
+
+  body {
+    scroll-snap-type: none;
+  }
+
+  body::before,
+  body::after {
+    display: none;
+  }
+
   section {
     padding: var(--space-2xl) var(--space-md);
+    min-height: auto;
+    scroll-snap-align: none;
   }
 }

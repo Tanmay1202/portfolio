@@ -193,4 +193,23 @@
     .endpoint-details {
         padding: var(--space-md);
     }
+
+    .detail-row {
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+    }
+
+    .contact-grid {
+        padding-bottom: var(--space-4xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .interface-form {
+        padding: var(--space-md);
+    }
+
+    .form-input {
+        font-size: 16px;
+    }
 }
