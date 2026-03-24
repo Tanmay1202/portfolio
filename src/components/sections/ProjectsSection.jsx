@@ -57,6 +57,23 @@ const ProjectsSection = () => {
                 github: 'https://github.com/Tanmay1202',
                 live: 'https://environ-frontend.vercel.app/'
             }
+        },
+        {
+            id: 'proc_004',
+            name: 'TCP/IP Server and Client',
+            timestamp: '2026.Q1',
+            status: 'EXIT_SUCCESS',
+            exitCode: '0x00',
+            output: 'Engineered a robust multi-threaded TCP/IP server and client architecture from first principles using Rust. Handled low-level socket bindings, raw byte-stream parsing, connection lifecycles, and panic-free error management to facilitate reliable systemic network communication.',
+            metrics: {
+                architecture: 'First Principles',
+                protocol: 'TCP/IP',
+                language: 'Rust'
+            },
+            stack: ['Rust', 'Networking', 'Socket Programming', 'TCP/IP'],
+            links: {
+                github: 'https://github.com/Tanmay1202'
+            }
         }
     ];
 
