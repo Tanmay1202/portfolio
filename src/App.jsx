@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import SystemLoader from './components/SystemLoader';
 import SystemNav from './components/SystemNav';
 import IntroSection from './components/sections/IntroSection';
-import WorkSection from './components/sections/WorkSection';
+import CertificationsSection from './components/sections/CertificationsSection';
+import AchievementsSection from './components/sections/AchievementsSection';
 import SkillsSection from './components/sections/SkillsSection';
 import ProjectsSection from './components/sections/ProjectsSection';
 import ContactSection from './components/sections/ContactSection';
@@ -60,7 +61,8 @@ function App() {
 
       <main className={`mode-${currentMode}`}>
         <IntroSection />
-        <WorkSection />
+        <CertificationsSection />
+        <AchievementsSection />
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />

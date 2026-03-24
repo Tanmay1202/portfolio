@@ -6,10 +6,11 @@ const SystemNav = ({ currentMode, onModeChange }) => {
 
     const modes = [
         { id: 'init', label: 'INIT', address: '0x0000' },
-        { id: 'work', label: 'WORK', address: '0x1000' },
-        { id: 'skills', label: 'SKILLS', address: '0x2000' },
-        { id: 'projects', label: 'PROJECTS', address: '0x3000' },
-        { id: 'contact', label: 'CONTACT', address: '0x4000' }
+        { id: 'certifications', label: 'CERTS', address: '0x1000' },
+        { id: 'achievements', label: 'ACHIEVEMENTS', address: '0x2000' },
+        { id: 'skills', label: 'SKILLS', address: '0x3000' },
+        { id: 'projects', label: 'PROJECTS', address: '0x4000' },
+        { id: 'contact', label: 'CONTACT', address: '0x5000' }
     ];
 
     useEffect(() => {

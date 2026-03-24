@@ -303,7 +303,8 @@ pre {
   transition: opacity var(--transition-slow);
 }
 
-main.mode-work .bg-grid::before,
+main.mode-certifications .bg-grid::before,
+main.mode-achievements .bg-grid::before,
 main.mode-projects .bg-grid::before {
   opacity: 0.25;
 }
@@ -459,7 +460,8 @@ main[class*="mode-"] section {
 }
 
 main.mode-init #init,
-main.mode-work #work,
+main.mode-certifications #certifications,
+main.mode-achievements #achievements,
 main.mode-skills #skills,
 main.mode-projects #projects,
 main.mode-contact #contact {
