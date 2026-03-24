@@ -15,8 +15,8 @@ const WorkSection = () => {
             name: 'Academic Core - LPU',
             status: 'LOADED',
             address: '0x1B00',
-            description: 'B.Tech in Computer Science (7.94 CGPA). Focus on OS, DBMS, and Network Communication.',
-            stack: ['DBMS', 'Computer Networks', 'OS']
+            description: 'B.Tech in Computer Science (8.06 CGPA).',
+            stack: ['Computer Science']
         },
         {
             id: 'mod_003',
@@ -24,7 +24,7 @@ const WorkSection = () => {
             status: 'LOADED',
             address: '0x1C00',
             description: 'GDG Hack2Skill Top 105. Solved 400+ algorithmic problems across LeetCode & CodeForces.',
-            stack: ['Problem Solving', 'Competitive Programming']
+            stack: ['Problem Solving', 'Competitive Programming', 'Web Development']
         },
         {
             id: 'mod_004',
